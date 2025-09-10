@@ -1,0 +1,11 @@
+CREATE TABLE email_logs (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    to_email VARCHAR(255) NOT NULL,
+    subject VARCHAR(512) NOT NULL,
+    body TEXT NOT NULL,
+    status VARCHAR(64) NOT NULL,
+    delivered BOOLEAN NOT NULL DEFAULT FALSE,
+    error_text TEXT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
